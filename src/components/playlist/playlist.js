@@ -39,7 +39,7 @@ export default function Playlist() {
   if (!data) return <p></p>;
 
   return (
-    <div className="w-[500px] border-r-2 border-black flex flex-col gap-3 p-4 overflow-y-auto h-[100dvh]">
+    <div className="w-[450px] border-r-2 border-black flex flex-col gap-3 p-4 overflow-y-auto h-[100dvh]">
       <h2 className="font-bold text-[30px]">Playlist</h2>
       {message ? (
         <span>{message}</span>

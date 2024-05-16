@@ -14,7 +14,7 @@ export default function Card({
       <div>
         <img src={image} alt={name} />
       </div>
-      <div className="w-full h-[300px] flex gap-2 p-2 items-center justify-center">
+      <div className="w-full h-[250px] flex gap-2 p-2 items-center justify-center">
         <div className="w-[400px] flex flex-col gap-2 align-center">
           <span key={name} className="text-[14px]">
             {name.length >= 20 ? `${name.slice(0, 20)}...` : name}

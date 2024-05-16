@@ -49,7 +49,7 @@ export default function Music({ search }) {
   return (
     <div className="w-full h-[100dvh] overflow-y-auto p-4 flex flex-col gap-3">
       <div className="w-full h-[80px] bg-white border-b-2 border-black flex p-2 items-center justify-end">
-        <div className="w-[80px] bg-gray-500 p-2 flex items-center text-white justify-center rounded-full bg-white gap-2">
+        <div className="w-[80px] bg-gray-500 p-2 flex items-center text-white justify-center rounded-full gap-2">
           <span className="text-[20px]">{songs.length}</span>
           <button>
             <TbMusic size={30} />
@@ -60,7 +60,7 @@ export default function Music({ search }) {
       {error ? (
         <span>{error}</span>
       ) : (
-        <div className="grid grid-cols-5 gap-2">
+        <div className="grid grid-cols-4 gap-4">
           {data.tracks.items.map(({ id, name, artists, album }) => (
             <Card
               key={id}
