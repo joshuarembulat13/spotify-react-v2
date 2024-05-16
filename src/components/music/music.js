@@ -57,19 +57,23 @@ export default function Music({ search }) {
         </div>
       </div>
       <h2 className="text-2xl">Tracks</h2>
-      <div className="grid grid-cols-5 gap-2">
-        {data.tracks.items.map(({ id, name, artists, album }) => (
-          <Card
-            key={id}
-            songID={id}
-            name={name}
-            artist={artists}
-            image={album.images[0].url}
-            song={songs}
-            addSongs={addSongToBag}
-          />
-        ))}
-      </div>
+      {error ? (
+        <span>{error}</span>
+      ) : (
+        <div className="grid grid-cols-5 gap-2">
+          {data.tracks.items.map(({ id, name, artists, album }) => (
+            <Card
+              key={id}
+              songID={id}
+              name={name}
+              artist={artists}
+              image={album.images[0].url}
+              song={songs}
+              addSongs={addSongToBag}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

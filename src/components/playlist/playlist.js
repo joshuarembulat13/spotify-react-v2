@@ -41,18 +41,22 @@ export default function Playlist() {
   return (
     <div className="w-[500px] border-r-2 border-black flex flex-col gap-3 p-4 overflow-y-auto h-[100dvh]">
       <h2 className="font-bold text-[30px]">Playlist</h2>
-      <div className="grid gap-2">
-        {data.length === 0
-          ? null
-          : data.items.map(({ images, id, name, type }) => (
-              <PlaylistCard
-                image={images[0].url}
-                key={id}
-                name={name}
-                type={type}
-              />
-            ))}
-      </div>
+      {message ? (
+        <span>{message}</span>
+      ) : (
+        <div className="grid gap-2">
+          {data.length === 0
+            ? null
+            : data.items.map(({ images, id, name, type }) => (
+                <PlaylistCard
+                  image={images[0].url}
+                  key={id}
+                  name={name}
+                  type={type}
+                />
+              ))}
+        </div>
+      )}
     </div>
   );
 }
